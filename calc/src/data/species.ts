@@ -2260,7 +2260,7 @@ const ADV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     abilities: {0: 'Levitate'},
   },
   Luvdisc: {
-    types: ['Water'],
+    types: ['Water', 'Fairy'],
     bs: {hp: 73, at: 70, df: 75, sa: 120, sd: 85, sp: 117},
     weightkg: 8.7,
     abilities: {0: 'Swift Swim'},
