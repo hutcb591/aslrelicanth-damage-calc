@@ -1015,7 +1015,7 @@ const GSC_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
   Ariados: {
     types: ['Bug', 'Poison'],
-    bs: {hp: 70, at: 90, df: 70, sa: 60, sd: 60, sp: 40},
+    bs: {hp: 70, at: 110, df: 70, sa: 40, sd: 60, sp: 80},
     weightkg: 33.5,
   },
   Azumarill: {
