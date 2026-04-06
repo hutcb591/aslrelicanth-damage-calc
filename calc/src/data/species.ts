@@ -1886,7 +1886,7 @@ const ADV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
   Beautifly: {
     types: ['Bug', 'Flying'],
-    bs: {hp: 60, at: 70, df: 50, sa: 90, sd: 50, sp: 65},
+    bs: {hp: 60, at: 55, df: 60, sa: 120, sd: 75, sp: 85},
     weightkg: 28.4,
     abilities: {0: 'Swarm'},
   },
