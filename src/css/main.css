@@ -201,7 +201,7 @@ footer a.cur, footer a.cur:hover {
     text-decoration: none;
     display: inline-block;
     font-family: Verdana,Helvetica,sans-serif;
-    font-size: 10pt;
+    font-size: 9pt;
     cursor: pointer;
 }
 .button:hover, .button:focus {
