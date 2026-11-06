@@ -675,7 +675,7 @@ export function calculateSMSSSV(
   const damage = [];
   for (let i = 0; i < 16; i++) {
     damage[i] =
-      getFinalDamage(baseDamage, i, typeEffectiveness, applyBurn, applyFreeze, stabMod, finalMod, protect);
+      getFinalDamage(baseDamage, i, typeEffectiveness, applyBurn, stabMod, finalMod, protect);
   }
   result.damage = childDamage ? [damage, childDamage] : damage;
 
@@ -758,7 +758,6 @@ export function calculateSMSSSV(
           i,
           typeEffectiveness,
           applyBurn,
-          applyFreeze,
           stabMod,
           newFinalMod,
           protect
