@@ -2762,6 +2762,7 @@ const SM_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     makesContact: true,
     category: 'Physical',
     zp: 140,
+    isSlicing: true,
   },
   'Sparkling Aria': {
     bp: 90,
@@ -3449,7 +3450,7 @@ const SS_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     maxPower: 1,
   },
   'Meteor Assault': {
-    bp: 150,
+    bp: 170,
     type: 'Fighting',
     category: 'Physical',
     zp: 200,
@@ -4354,6 +4355,7 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     zp: 190,
     maxPower: 140,
     makesContact: true,
+    isPunch: true,
   },
   'Dire Claw': {
     bp: 80,
