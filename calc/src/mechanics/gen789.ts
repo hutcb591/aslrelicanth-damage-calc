@@ -488,7 +488,6 @@ export function calculateSMSSSV(
         !field.isGravity && !move.named('Thousand Arrows') &&
         !defender.hasItem('Iron Ball') && defender.hasAbility('Eelevate')) ||
       (move.flags.bullet && defender.hasAbility('Bulletproof')) ||
-      (move.flags.pivot && defender.hasAbility('Honey Trap')) ||
       (move.flags.sound && !move.named('Clangorous Soul') && defender.hasAbility('Soundproof')) ||
       (move.priority > 0 && defender.hasAbility('Queenly Majesty', 'Dazzling', 'Armor Tail')) ||
       (move.hasType('Ground') && defender.hasAbility('Earth Eater')) ||
@@ -639,10 +638,6 @@ export function calculateSMSSSV(
     !attacker.hasAbility('Guts') &&
     !move.named('Facade');
   desc.isBurned = applyBurn;
-  const applyFreeze =
-    attacker.hasStatus('frz') &&
-    move.category === 'Special'
-  desc.isFrozen = applyFreeze;
   const finalMods = calculateFinalModsSMSSSV(
     gen,
     attacker,
@@ -1249,7 +1244,6 @@ export function calculateBPModsSMSSSV(
 
   if ((attacker.hasAbility('Reckless') && (move.recoil || move.hasCrashDamage)) ||
       (attacker.hasAbility('Iron Fist') && move.flags.punch) ||
-      (attacker.hasAbility('Skewer') && move.flags.piercing)
   ) {
     bpMods.push(4915);
     desc.attackerAbility = attacker.ability;
@@ -1742,10 +1736,6 @@ export function calculateFinalModsSMSSSV(
 ) {
   const finalMods = [];
 
-  if (attacker.hasStatus('frz') && move.category === 'Special') {
-    finalMods.push(4096);
-    desc.isFrozen = true;
-  }
   if (field.defenderSide.isReflect && move.category === 'Physical' &&
       !isCritical && !field.defenderSide.isAuroraVeil) {
     // doesn't stack with Aurora Veil
