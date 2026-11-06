@@ -1242,8 +1242,7 @@ export function calculateBPModsSMSSSV(
   }
 
   if ((attacker.hasAbility('Reckless') && (move.recoil || move.hasCrashDamage)) ||
-      (attacker.hasAbility('Iron Fist') && move.flags.punch) ||
-  ) {
+      (attacker.hasAbility('Iron Fist') && move.flags.punch)) {
     bpMods.push(4915);
     desc.attackerAbility = attacker.ability;
   }
@@ -1652,7 +1651,7 @@ export function calculateDfModsSMSSSV(
     dfMods.push(6144);
     desc.defenderItem = defender.item;
   } else if (
-    (defender.hasItem('Metal Powder') && defender.named('Ditto') && hitsPhysical) ||
+    (defender.hasItem('Metal Powder') && defender.named('Ditto') && hitsPhysical)
   ) {
     dfMods.push(8192);
     desc.defenderItem = defender.item;
